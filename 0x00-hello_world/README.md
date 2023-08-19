@@ -1,4 +1,4 @@
-THIS IS MY README FILE ABOUT 0x00. C - Hello, World PROLECT
+iTHIS IS MY README FILE ABOUT 0x00. C - Hello, World PROLECT
 
 Task 0 : 0. Preprocessor
 script that runs a C file through the preprocessor and save the result into another file.
