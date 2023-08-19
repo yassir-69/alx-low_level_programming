@@ -1,5 +1,2 @@
 #!/bin/bash
-
-# Run the C file through the preprocessor and save the output
-
 gcc -E $CFILE -o c
