@@ -3,28 +3,28 @@
 #include <stdlib.h>
 
 /**
- * add_node - adds a new node at the beginning of a linked list
- * @head_ref: the double pointer to the list_t list
- * @new_str: it's a new string to add in the node
+ * add_node - Inserts a fresh node at the start of a linked list
+ * @str: This is a novel string to include within the node
+ * @head: The pointer that points to another pointer, referencing the list t list.
  *
- * Return: it's about the address of the new element, or NULL if it fails
+ * Return: The memory location of the new item, or NULL if unsuccessful.
  */
-list_t *add_node(list_t **head_ref, const char *new_str)
+list_t *add_node(list_t **head, const char *str);
 {
-    list_t *new_node;
-    unsigned int new_len = 0;
+    list_t *hoo_list;
+    unsigned int yoo = 0;
 
-    while (new_str[new_len])
-        new_len++;
+    while (str[yoo])
+        yoo++;
 
-    new_node = malloc(sizeof(list_t));
-    if (!new_node)
+    hoo_list = malloc(sizeof(list_t));
+    if (!hoo_list)
         return NULL;
 
-    new_node->str = strdup(new_str);
-    new_node->len = new_len;
-    new_node->next = (*head_ref);
-    (*head_ref) = new_node;
+    hoo_list->str = strdup(new_str);
+    hoo_list->len = new_len;
+    hoo_list->next = (*head_ref);
+    (*head) = hoo_list;
 
-    return (*head_ref);
+    return (*head);
 }

@@ -3,39 +3,40 @@
 #include <stdlib.h>
 
 /**
- * add_node_end - adds a new node at the end of a linked list
- * @head_yhl: the double pointer to the list_t list
- * @yhl_str: the string to put in the new node
+ * add_node_end - Inserts a fresh node at the tail of a linked list
+ * @str: The string to place within the newly created node.
+ * @head: The pointer that references another pointer pointing to the list t list
  *
- * Return: address of the new element, or NULL if it failed
+ * Return: The memory location of the new item, or NULL in case of failure.
  */
-list_t *add_node_end(list_t **head_yhl, const char *yhl_str)
+list_t *add_node_end(list_t **head, const char *str);
 {
-    list_t *goo;
-    list_t *temp = *head_yhl;
+    list_t *hoo_list;
+    list_t *yoo_list = *head;
     unsigned int new_len = 0;
 
     while (yhl_str[new_len])
         new_len++;
 
-    goo = malloc(sizeof(list_t));
-    if (!goo)
+    hoo_list = malloc(sizeof(list_t));
+    if (!hoo_list)
         return NULL;
 
-    goo->str = strdup(yhl_str);
-    goo->len = new_len;
-    goo->next = NULL;
+    hoo_list->str = strdup(str);
+    hoo_list->len = new_len;
+    hoo_list->next = NULL;
 
-    if (*head_yhl == NULL)
+    if (*yoo_list == NULL)
     {
-        *head_yhl = goo;
-        return (goo);
+        *yoo_list = hoo_list;
+        return (hoo_list);
     }
 
-    while (temp->next)
-        temp = temp->next;
+    while (yoo_list->next)
+        yoo_list = yoo_list->next;
 
-    temp->next = goo;
+    yoo_list->next = hoo_list;
 
-    return (goo);
+    return (hoo_list);
 }
+

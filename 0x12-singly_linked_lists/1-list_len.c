@@ -2,20 +2,19 @@
 #include <stdlib.h>
 
 /**
- * list_len - returns the number of elements in a linked list
- * @head: the pointer to the list_t list
+ * list_len - Returns the count of elements present in a linked list
+ * @h: Pointer referring to the list t list
  *
- * Return: The number of elements in head
+ * Return: The count of elements within the head or The number of elements in head
  */
-size_t list_len(const list_t *head)
+size_t list_len(const list_t *h);
 {
     size_t y = 0;
 
-    while (head)
+    while (h)
     {
         y++;
-        head = head->next;
+        h = head->next;
     }
-    return (y);
+    return y;
 }
-
