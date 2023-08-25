@@ -27,14 +27,15 @@ int main(void)
     new->next = head;
     head = new;
     n = print_list(head);
-    printf("-> %lu elements\n", n);
+    printf("-> %lu elements\n", (unsigned long)n);
 
     printf("\n");
     free(new->str);
     new->str = NULL;
     n = print_list(head);
-    printf("-> %lu elements\n", n);
+    printf("-> %lu elements\n", (unsigned long)n);
 
     free(new);
     return (0);
 }
+

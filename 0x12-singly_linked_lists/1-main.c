@@ -8,8 +8,9 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int main(void) 
 {
+
     list_t *head;
     list_t *new;
     list_t hello = {"World", 5, NULL};
@@ -27,7 +28,7 @@ int main(void)
     new->next = head;
     head = new;
     n = list_len(head);
-    printf("-> %lu elements\n", n);
+    printf("-> %lu elements\n", (unsigned long)n);
     free(new->str);
     free(new);
     return (0);

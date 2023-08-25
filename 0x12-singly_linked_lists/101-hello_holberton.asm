@@ -1,10 +1,22 @@
-global   main
-       extern    printf
+section .data
+    hello_msg db "Hello, Holberton", 0
+    format db "%s", 0
+
+section .text
+    global main
+    extern printf
+
 main:
-       mov   edi, format
-       xor   eax, eax
-       call  printf
-       mov   eax, 0
-       ret
-format: db `Hello, Holberton\n`,0
+    push rdi                  ; Save any needed registers
+    push rsi
+    push rax
+    lea rdi, [hello_msg]      ; Load the address of the message into rdi
+    mov rax, 0                ; Clear rax (since printf expects return value there)
+    call printf               ; Call the printf function
+    pop rax                   ; Restore the registers
+    pop rsi
+    pop rdi
+
+    mov eax, 0                ; Exit with status 0
+    ret
 

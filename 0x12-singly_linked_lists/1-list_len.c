@@ -7,14 +7,14 @@
  *
  * Return: The count of elements within the head or The number of elements in head
  */
-size_t list_len(const list_t *h);
+size_t list_len(const list_t *h)
 {
     size_t y = 0;
 
     while (h)
     {
         y++;
-        h = head->next;
+        h = h->next;
     }
-    return y;
+    return (y);
 }

@@ -5,7 +5,7 @@
  * free_list - Deallocates a linked list
  * @head: The list t list that needs to be deallocated.
  */
-void free_list(list_t *head);
+void free_list(list_t *head)
 {
 	list_t *yoo_list;
 

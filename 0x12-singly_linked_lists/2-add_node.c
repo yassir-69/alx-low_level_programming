@@ -9,7 +9,7 @@
  *
  * Return: The memory location of the new item, or NULL if unsuccessful.
  */
-list_t *add_node(list_t **head, const char *str);
+list_t *add_node(list_t **head, const char *str)
 {
     list_t *hoo_list;
     unsigned int yoo = 0;
@@ -21,9 +21,9 @@ list_t *add_node(list_t **head, const char *str);
     if (!hoo_list)
         return NULL;
 
-    hoo_list->str = strdup(new_str);
-    hoo_list->len = new_len;
-    hoo_list->next = (*head_ref);
+    hoo_list->str = strdup(str);
+    hoo_list->len = yoo;
+    hoo_list->next = (*head);
     (*head) = hoo_list;
 
     return (*head);
